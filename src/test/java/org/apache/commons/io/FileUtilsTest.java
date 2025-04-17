@@ -38,7 +38,7 @@ public class FileUtilsTest {
         assertTrue(FileUtils.getFile(tempFile.getAbsolutePath()).exists());
     }
 
-    @Test
+    @Test(timeout = 1000)
     public void testbyteCountToDisplaySize() {
         BigInteger fileSize = BigInteger.valueOf(tempFile.length());
         String displaySize = FileUtils.byteCountToDisplaySize(fileSize);
