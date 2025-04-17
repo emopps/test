@@ -244,7 +244,7 @@ public class FileUtils {
         }
         return displaySize;
 
-        // 注入缺陷：当文件大小大于 1B 时，显示为 1B
+//        // 注入缺陷：当文件大小大于 1B 时，显示为 1B
 //        if (size.compareTo(BigInteger.ONE) > 0) {
 //            displaySize = "1 bytes";
 //        } else {
