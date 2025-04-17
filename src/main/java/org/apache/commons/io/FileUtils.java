@@ -227,30 +227,30 @@ public class FileUtils {
         Objects.requireNonNull(size, "size");
         final String displaySize;
 
-//        if (size.divide(ONE_EB_BI).compareTo(BigInteger.ZERO) > 0) {
-//            displaySize = size.divide(ONE_EB_BI) + " EB";
-//        } else if (size.divide(ONE_PB_BI).compareTo(BigInteger.ZERO) > 0) {
-//            displaySize = size.divide(ONE_PB_BI) + " PB";
-//        } else if (size.divide(ONE_TB_BI).compareTo(BigInteger.ZERO) > 0) {
-//            displaySize = size.divide(ONE_TB_BI) + " TB";
-//        } else if (size.divide(ONE_GB_BI).compareTo(BigInteger.ZERO) > 0) {
-//            displaySize = size.divide(ONE_GB_BI) + " GB";
-//        } else if (size.divide(ONE_MB_BI).compareTo(BigInteger.ZERO) > 0) {
-//            displaySize = size.divide(ONE_MB_BI) + " MB";
-//        } else if (size.divide(ONE_KB_BI).compareTo(BigInteger.ZERO) > 0) {
-//            displaySize = size.divide(ONE_KB_BI) + " KB";
-//        } else {
-//            displaySize = size + " bytes";
-//        }
-//        return displaySize;
-
-        // 注入缺陷：当文件大小大于 1B 时，显示为 1B
-        if (size.compareTo(BigInteger.ONE) > 0) {
-            displaySize = "1 bytes";
+        if (size.divide(ONE_EB_BI).compareTo(BigInteger.ZERO) > 0) {
+            displaySize = size.divide(ONE_EB_BI) + " EB";
+        } else if (size.divide(ONE_PB_BI).compareTo(BigInteger.ZERO) > 0) {
+            displaySize = size.divide(ONE_PB_BI) + " PB";
+        } else if (size.divide(ONE_TB_BI).compareTo(BigInteger.ZERO) > 0) {
+            displaySize = size.divide(ONE_TB_BI) + " TB";
+        } else if (size.divide(ONE_GB_BI).compareTo(BigInteger.ZERO) > 0) {
+            displaySize = size.divide(ONE_GB_BI) + " GB";
+        } else if (size.divide(ONE_MB_BI).compareTo(BigInteger.ZERO) > 0) {
+            displaySize = size.divide(ONE_MB_BI) + " MB";
+        } else if (size.divide(ONE_KB_BI).compareTo(BigInteger.ZERO) > 0) {
+            displaySize = size.divide(ONE_KB_BI) + " KB";
         } else {
             displaySize = size + " bytes";
         }
         return displaySize;
+
+//        // 注入缺陷：当文件大小大于 1B 时，显示为 1B
+//        if (size.compareTo(BigInteger.ONE) > 0) {
+//            displaySize = "1 bytes";
+//        } else {
+//            displaySize = size + " bytes";
+//        }
+//        return displaySize;
     }
 
     /**
