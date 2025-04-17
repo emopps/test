@@ -55,5 +55,4 @@ public class FileUtilsTest {
             assertEquals(fileSize + " bytes", displaySize);
         }
     }
-
 }
