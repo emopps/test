@@ -45,9 +45,9 @@ public class FileUtilsTest {
         if (fileSize.compareTo(BigInteger.valueOf(1024)) > 0) {
             assertTrue(displaySize.endsWith(" KB"));
         } else if (fileSize.compareTo(BigInteger.ONE) > 0) {
-            assertEquals(fileSize + " bytes", displaySize);
+            assertEquals(fileSize + " B", displaySize);
         } else {
-            assertEquals(fileSize + " bytes", displaySize);
+            assertEquals(fileSize + " B", displaySize);
         }
     }
 
