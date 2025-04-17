@@ -40,6 +40,7 @@ public class FileUtilsTest {
 
     @Test(timeout = 1000)
     public void testbyteCountToDisplaySize() {
+
         BigInteger fileSize = BigInteger.valueOf(tempFile.length());
         String displaySize = FileUtils.byteCountToDisplaySize(fileSize);
         if (fileSize.compareTo(BigInteger.valueOf(1024)) > 0) {
